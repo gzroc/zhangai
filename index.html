@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>广东省南丰强制隔离戒毒所障碍报告系统</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<script type="text/javascript" src="book/Display.js"></script>
+<style>
+body,html{width:100%;margin:0px;padding:0px;font-size:14px}
+.JXK_button{border:1px #808080 solid;background:#F2F6FB;color:#000000}
+.JXK_Inp{border:1px #cccccc solid;background:#ffffff;line-height:16px}
+.JXK_List{width:100%;border:1px solid #000000;padding:0px 0px 5px 0px;margin-bottom:10px; background-color:#FFFFFF;}
+.List1{background:#fff;padding-top:6px;border-bottom:0px #dddddd dotted}
+.List1_1{float:left;display:inline;width:100%;color:#000000;padding-left:10px;font-size:14px;}
+.List1_2{float:left;display:inline;width:100%;padding-left:10px;}
+.List2{font-size:14px;line-height:180%;padding:8px 8px 3px 8px;word-wrap:break-word;font-family:"Arial","宋体";}
+.List2 a{color:#0000FF;border-bottom:1px #3E7FB6 dashed}
+.List3{font-size:14px;line-height:130%;padding:8px 8px 3px 8px}
+#aaa{ background-color:#ff8800;  width:70px; color:#fff; text-align:center; font-size:24px;}
+.ttt{ background-color:#ddd;  color:#000; text-align:center;}
+.bbb{ background-color:#666;  width:100px; color:#fff; text-align:center;}
+#retime{ font-style:italic; float:right; margin-right:100px;}
+/*分页*/
+.WinPage{width:750px;padding:0px 0px 0px 0px;font-size:14px;color:#000000}
+.WinPage div{background:#F8F8F8;font-family:"宋体";border:1px #DDDDDD solid;margin-left:5px;padding:4px 5px 2px 5px;display:inline;float:left}
+.WinPageDis{color:#cccccc}
+.WinPageCur{color:#FF0000;font-weight:bold}
+</style>
+</head>
+<body bgcolor="#cccccc">
+<div style="width:1000px;margin:auto">
+<div style="clear:both;padding:30px;line-height:32px;background:#ccc;border-bottom:10px solid #000; text-align:center; font-size:36px; font-weight:bold;">广东省南丰强制隔离戒毒所障碍报告系统</div>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+<tr><td width=252 valign=top bgcolor="#C2FAFE">
+<form name="form1" id="form1" target="Sendiframe" action="book/List.asp?Action=save" method="post" onSubmit="return SendNow()">
+报障人：&nbsp;&nbsp;&nbsp;<input type="text" name="JXK_Myname" id="JXK_Myname" size="10" maxlength="4" class="JXK_Inp" value="真实姓名" onfocus="if(this.value=='真实姓名')this.value=''" onblur="if(this.value=='')this.value='真实姓名'">
+<!--增加内容-->&nbsp;&nbsp;&nbsp;
+联系人：&nbsp;&nbsp;&nbsp;
+<input type="text" name="JXK_Peo" id="JXK_Peo" size="10" maxlength="4" class="JXK_Inp" value="必填"  onfocus="if(this.value=='必填')this.value=''" onblur="if(this.value=='')this.value='必填'">&nbsp;&nbsp;&nbsp;
+联系电话：
+<input type="text" name="JXK_Tel" id="JXK_Tel" size="15" maxlength="11" class="JXK_Inp" value="手机号码"  onfocus="if(this.value=='手机号码')this.value=''"  onblur="if(this.value=='')this.value='手机号码'" onkeyup="value=value.replace(/[^\d]/g,'')">&nbsp;&nbsp;&nbsp;
+具体位置：
+<input type="text" name="JXK_Loc" id="JXK_Loc" size="20" maxlength="9" class="JXK_Inp" value="9个汉字"  onfocus="if(this.value=='9个汉字')this.value=''" onblur="if(this.value=='')this.value='9个汉字'">&nbsp;&nbsp;&nbsp;
+<!--所属单位：
+<input type="text" name="JXK_Off" id="JXK_Off" size="12" maxlength="11" class="JXK_Inp" value="必填"  onfocus="if(this.value=='必填')this.value=''" onblur="if(this.value=='')this.value='必填'">-->
+<!--增加内容-->
+<div style="padding-top:8px">
+故障描述：
+<input type="text" name="JXK_Content" id="JXK_Content" size="110" maxlength='42' class="JXK_Inp" value="支持42个汉字"></input>
+</div>
+<div id="AdminLogin" style="padding-top:8px;display:none">输入密码：<input class="Jxk_Inp" id="Pass" type="Password" size=15> <input name="button" type="button" class="JXK_button" value="登陆" onclick="Login()"></div>
+<div id="Send1" style="padding-top:8px">
+<input name="submit" id="submit" type="submit" class="JXK_button" value="提交">　<input name="button" type="reset" class="JXK_button" value="重写">　<input name="button" type="button" class="JXK_button" value="运维人员登陆" onclick="if($('AdminLogin').style.display==''){$('AdminLogin').style.display='none'}else{$('AdminLogin').style.display=''}"> (<font style="color:#ff0000" id='TextSum'>0</font>/500)</div>
+</div>
+<div id="Send2" style="padding-top:8px"></div>
+<iframe style="width:0px;height:0px" name="Sendiframe" src="" frameBorder=0 scrolling=no></iframe>
+</form></td></tr><tr>
+<td valign="top" id="BookList">----</td>
+</table>
+<!--版权说明-->
+<table width="100%" height="60" border="0" align=center cellpadding="0" cellspacing="0" >
+<tr>
+<td align=center><hr />Copyright &copy; 2017-<%=year(date)%>　广东省南丰强制隔离戒毒所科技办  All Rights Reserved.</td>
+</tr>
+<tr>
+<td align=center><b>技术支持:李楷鹏</b></td>
+</tr>
+</table>
+
+</div>
+</body>
+</html>
